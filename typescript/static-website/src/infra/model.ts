@@ -4,7 +4,6 @@ export interface IProject {
   readonly CROSS_ACCOUNT_ROLE_ARN: string
   readonly DNS_ACCOUNT: string
   readonly PRIMARY_REGION: string
-  readonly VALIDATION_METHOD: 'DNS' | 'EMAIL'
 }
 
 export interface IStage extends IProject {

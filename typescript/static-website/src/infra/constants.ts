@@ -6,7 +6,6 @@ export const PROJECT: IProject = {
   CROSS_ACCOUNT_ROLE_ARN: 'arn:aws:iam::123456789999:role/NameOfYourRole',
   DNS_ACCOUNT: '123456789999',
   PRIMARY_REGION: 'ca-central-1',
-  VALIDATION_METHOD: 'DNS',
 }
 
 export const DEVELOPMENT: IStage = {

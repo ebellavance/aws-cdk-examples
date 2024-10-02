@@ -8,7 +8,6 @@ interface ResourceProperties {
   CrossAccountRoleArn: string;
   DomainName: string;
   SubjectAlternativeNames?: string[];
-  ValidationMethod: 'DNS' | 'EMAIL';
 }
 
 interface Event {
@@ -87,7 +86,6 @@ exports.handler = async (event: Event) => {
     const requestType = event.RequestType;
     const { 
       DomainName: domainName, 
-      ValidationMethod: validationMethod = 'DNS', 
       SubjectAlternativeNames: subjectAlternativeNames = [], 
       CrossAccountRoleArn: crossAccountRoleArn,
       CloudfrontCertificateRegion: cloudfrontCertificateRegion
@@ -100,7 +98,8 @@ exports.handler = async (event: Event) => {
     if (requestType === 'Create' || requestType === 'Update') {
       let certificateArn: string;
       let oldCertificateArn: string | undefined;
-
+      const validationMethod = 'DNS';
+      
       if (requestType === 'Update') {
         oldCertificateArn = event.PhysicalResourceId;
         const oldProps = event.OldResourceProperties!;

@@ -184,7 +184,6 @@ export class WebsiteStack extends Stack {
         CrossAccountRoleArn: stage.CROSS_ACCOUNT_ROLE_ARN,
         DomainName: stage.DOMAIN_NAME,
         SubjectAlternativeNames: stage.ALTERNATE_DOMAIN_NAME,
-        ValidationMethod: stage.VALIDATION_METHOD,
       },
     });
 

@@ -3,8 +3,8 @@ import { IStage, IProject } from './model'
 export const PROJECT: IProject = {
   ALLOWED_IP: ['0.0.0.0'],
   CLOUDFRONT_CERTIFICATE_REGION: 'us-east-1',
-  CROSS_ACCOUNT_ROLE_ARN: 'arn:aws:iam::123456789999:role/NameOfYourRole',
-  DNS_ACCOUNT: '123456789999',
+  CROSS_ACCOUNT_ROLE_ARN: 'arn:aws:iam::333333333333:role/NameOfYourRole',
+  DNS_ACCOUNT: '333333333333',
   PRIMARY_REGION: 'ca-central-1',
 }
 

@@ -7,7 +7,7 @@ This example use 3 accounts:
 - PROD account
 
 ## Before deploying
-- Create a role in your DNS account who will be assumed by lambda functions of custom resources
+- Create a role in your DNS account who will be assumed by lambda functions of custom resources. I prefered doing only a role rather than boostrapping the DNS account.
 - Update the constants.ts file with your informations before deploying
 
 ## Permission needed for the role in the DNS account
